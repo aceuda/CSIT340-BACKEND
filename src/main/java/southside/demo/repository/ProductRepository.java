@@ -1,0 +1,8 @@
+package southside.demo.repository;
+
+import southside.demo.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+}
