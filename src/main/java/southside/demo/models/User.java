@@ -14,6 +14,9 @@ public class User {
     private String email;
     private String password;
 
+    @Column(nullable = false)
+    private String role = "user"; // Default role is "user"
+
     // GETTERS
     public Long getId() {
         return id;
@@ -31,6 +34,10 @@ public class User {
         return password;
     }
 
+    public String getRole() {
+        return role;
+    }
+
     // SETTERS
     public void setId(Long id) {
         this.id = id;
@@ -46,5 +53,9 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
